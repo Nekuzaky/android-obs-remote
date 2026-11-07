@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/connectPanel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="12dp"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
+
+        <EditText
+            android:id="@+id/hostInput"
+            style="@style/Field"
+            android:hint="@string/host_hint"
+            android:inputType="textUri|textNoSuggestions"
+            android:maxLength="255" />
+
+        <EditText
+            android:id="@+id/portInput"
+            style="@style/Field"
+            android:layout_marginTop="8dp"
+            android:hint="@string/port_hint"
+            android:inputType="number"
+            android:maxLength="5" />
+
+        <EditText
+            android:id="@+id/passwordInput"
+            style="@style/Field"
+            android:layout_marginTop="8dp"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword"
+            android:maxLength="256"
+            android:saveEnabled="false" />
+
+        <CheckBox
+            android:id="@+id/saveCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:buttonTint="@color/brand_soft"
+            android:filterTouchesWhenObscured="true"
+            android:minHeight="48dp"
+            android:text="@string/save_password"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/connectButton"
+            style="@style/PrimaryButton"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/connect"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/forgetButton"
+            style="@style/SecondaryButton"
+            android:layout_marginTop="8dp"
+            android:text="@string/forget_password"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/problemText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:accessibilityLiveRegion="polite"
+            android:textColor="@color/warning"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/connect_note"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SceneRemote</string>
+    <string name="info">About</string>
+    <string name="close">Close</string>
+    <string name="cancel">Cancel</string>
+    <string name="no_value">--</string>
+    <string name="info_message">SceneRemote controls OBS Studio over obs-websocket 5 on your local network.\n\nThe connection closes when you leave this app, and it also closes if Android kills the app. SceneRemote runs no background service. Your stream and recording keep running in OBS. When you come back, the app connects again if it is still in memory.\n\nobs-websocket is not encrypted, so SceneRemote only connects to private, loopback or link-local addresses. Public addresses are refused because the password challenge would cross the internet.\n\nA saved password is encrypted on this phone with a key held in the Android Keystore. It is never shown, logged or sent anywhere, and it is used only for the address and port it was saved with. obs-websocket has no server identity, so another machine holding that same address on a different network would still receive the login answer. There are no ads, accounts or analytics.</string>
+
+    <string name="host_hint">OBS address, for example 192.168.1.20</string>
+    <string name="port_hint">Port, 4455 by default</string>
+    <string name="password_hint">Password</string>
+    <string name="password_saved_hint">Saved password, used only for its own address</string>
+    <string name="save_password">Save the password, encrypted on this phone</string>
+    <string name="connect">Connect</string>
+    <string name="forget_password">Forget the saved password</string>
+    <string name="connect_note">The connection closes when you leave the app or if Android kills it. Your stream keeps running in OBS.</string>
+    <string name="keep_screen_on">Keep the screen on while connected, and for 5 minutes after a loss</string>
+    <string name="disconnect">Disconnect</string>
+
+    <string name="error_port">Enter a port from 1 to 65535</string>
+    <string name="error_host_empty">Enter the address of the OBS computer</string>
+    <string name="error_host_invalid">This is not a valid address or host name</string>
+
+    <string name="status_idle">Not connected</string>
+    <string name="status_preparing">Getting ready</string>
+    <string name="status_connecting">Connecting to %1$s</string>
+    <string name="status_authenticating">Signing in to OBS</string>
+    <string name="status_connected">Connected to %1$s</string>
+    <string name="status_retry_wait">Connection lost. Trying again in %1$d s, attempt %2$d</string>
+    <string name="status_retrying">Reconnecting to %1$s</string>
+    <string name="status_paused">Paused while the app is in the background</string>
+    <string name="status_failed">Could not connect</string>
+
+    <string name="problem_public">This is a public address, so SceneRemote refuses it. obs-websocket is not encrypted, and the password challenge would cross the internet. Use the address of the OBS computer on your local network.</string>
+    <string name="problem_unresolved">This name could not be resolved. Try the IP address of the OBS computer.</string>
+    <string name="problem_unreachable">Could not reach OBS at this address and port. Check that OBS is open and that its WebSocket server is on.</string>
+    <string name="problem_timeout">OBS did not answer in time.</string>
+    <string name="problem_not_obs">This server did not answer like obs-websocket.</string>
+    <string name="problem_protocol">The server sent something invalid, so the connection was closed.</string>
+    <string name="problem_oversize">The server sent a message that is too large, so the connection was closed.</string>
+    <string name="problem_wrong_password">OBS refused this password.</string>
+    <string name="problem_password_required">OBS asks for a password. Enter it and connect again.</string>
+    <string name="problem_unsupported">This version of obs-websocket is not supported. SceneRemote needs version 5.</string>
+    <string name="problem_session_ended">OBS ended this session.</string>
+    <string name="problem_lost">The connection was lost.</string>
+    <string name="problem_saved_other_host">The saved password belongs to another address, so it was not sent. Type the password for this address.</string>
+    <string name="problem_saved_unreadable">The saved password can no longer be read. Forget it or type the password again.</string>
+
+    <string name="stream_start">Start stream</string>
+    <string name="stream_stop">Stop stream</string>
+    <string name="stream_starting">Stream starting</string>
+    <string name="stream_stopping">Stream stopping</string>
+    <string name="record_start">Start record</string>
+    <string name="record_stop">Stop record</string>
+    <string name="record_starting">Record starting</string>
+    <string name="record_stopping">Record stopping</string>
+    <string name="stop_stream_title">Stop the stream?</string>
+    <string name="stop_stream_message">Your stream ends for your viewers as soon as you confirm.</string>
+    <string name="stop_stream_yes">Stop stream</string>
+
+    <string name="tile_stream">Stream time</string>
+    <string name="tile_record">Record time</string>
+    <string name="tile_dropped">Dropped</string>
+    <string name="tile_cpu">CPU</string>
+    <string name="tile_fps">FPS</string>
+
+    <string name="section_scenes">Scenes</string>
+    <string name="section_audio">Audio</string>
+    <string name="scenes_empty">No scenes yet.</string>
+    <string name="scenes_truncated">OBS has more scenes than this app shows.</string>
+    <string name="scene_on_program">%1$s\n(on program)</string>
+    <string name="scene_switching">%1$s\n(switching)</string>
+    <string name="audio_empty">No audio inputs.</string>
+    <string name="audio_truncated">OBS has more inputs than this app shows.</string>
+    <string name="audio_muted">Muted</string>
+    <string name="audio_live">On</string>
+    <string name="audio_mute_description">Mute %1$s</string>
+    <string name="audio_unmute_description">Unmute %1$s</string>
+
+    <string name="notice_switch">Could not switch the scene</string>
+    <string name="notice_start_stream">Could not start the stream</string>
+    <string name="notice_stop_stream">Could not stop the stream</string>
+    <string name="notice_start_record">Could not start the recording</string>
+    <string name="notice_stop_record">Could not stop the recording</string>
+    <string name="notice_mute">Could not change the mute state</string>
+    <string name="notice_busy">OBS is busy, try again</string>
+    <string name="notice_detail">%1$s: %2$s</string>
+    <string name="notice_save_failed">The password could not be saved on this phone.</string>
+</resources>

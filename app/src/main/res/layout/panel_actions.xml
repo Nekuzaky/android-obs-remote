@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/streamButton"
+            style="@style/BigButton"
+            android:layout_marginEnd="6dp"
+            android:text="@string/stream_start" />
+
+        <Button
+            android:id="@+id/recordButton"
+            style="@style/BigButton"
+            android:text="@string/record_start" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/noticeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:accessibilityLiveRegion="polite"
+        android:maxLines="3"
+        android:textColor="@color/warning"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            style="@style/Tile"
+            android:layout_marginEnd="6dp">
+
+            <TextView
+                style="@style/TileLabel"
+                android:text="@string/tile_stream" />
+
+            <TextView
+                android:id="@+id/streamTime"
+                style="@style/TileValue" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/Tile">
+
+            <TextView
+                style="@style/TileLabel"
+                android:text="@string/tile_record" />
+
+            <TextView
+                android:id="@+id/recordTime"
+                style="@style/TileValue" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            style="@style/Tile"
+            android:layout_marginEnd="6dp">
+
+            <TextView
+                style="@style/TileLabel"
+                android:text="@string/tile_dropped" />
+
+            <TextView
+                android:id="@+id/droppedValue"
+                style="@style/TileValue" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/Tile"
+            android:layout_marginEnd="6dp">
+
+            <TextView
+                style="@style/TileLabel"
+                android:text="@string/tile_cpu" />
+
+            <TextView
+                android:id="@+id/cpuValue"
+                style="@style/TileValue" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/Tile">
+
+            <TextView
+                style="@style/TileLabel"
+                android:text="@string/tile_fps" />
+
+            <TextView
+                android:id="@+id/fpsValue"
+                style="@style/TileValue" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical"
+        android:minHeight="48dp"
+        android:orientation="horizontal">
+
+        <Switch
+            android:id="@+id/keepSwitch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:filterTouchesWhenObscured="true"
+            android:minHeight="48dp"
+            android:saveEnabled="false"
+            android:text="@string/keep_screen_on"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:thumbTint="@color/switch_thumb"
+            android:trackTint="@color/switch_track" />
+
+        <Button
+            android:id="@+id/disconnectButton"
+            style="@style/SecondaryButton"
+            android:layout_width="104dp"
+            android:text="@string/disconnect" />
+    </LinearLayout>
+</LinearLayout>
